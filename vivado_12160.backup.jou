@@ -1,0 +1,88 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jan 14 19:25:41 2021
+# Process ID: 12160
+# Current directory: E:/FPGA/CODE/1_AND_GATE
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5296 E:\FPGA\CODE\1_AND_GATE\1_AND_GATE.xpr
+# Log file: E:/FPGA/CODE/1_AND_GATE/vivado.log
+# Journal file: E:/FPGA/CODE/1_AND_GATE\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source AND_GATE_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {10us} -objects [get_filesets sim_1]
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 ms
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+place_ports a F22
+place_ports b G22
+place_ports c T22
+place_ports clk Y9
+place_ports q U14
+place_ports rst N15
+set_property PULLTYPE PULLUP [get_ports [list a]]
+set_property PULLTYPE PULLUP [get_ports [list b]]
+set_property PULLTYPE PULLUP [get_ports [list c]]
+set_property SLEW SLOW [get_ports [list c]]
+set_property PULLTYPE NONE [get_ports [list clk]]
+set_property PULLTYPE PULLUP [get_ports [list q]]
+set_property PULLTYPE PULLUP [get_ports [list rst]]
+file mkdir E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/constrs_1/new
+close [ open E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/constrs_1/new/and_gate.xdc w ]
+add_files -fileset constrs_1 E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/constrs_1/new/and_gate.xdc
+set_property target_constrs_file E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/constrs_1/new/and_gate.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_sim
