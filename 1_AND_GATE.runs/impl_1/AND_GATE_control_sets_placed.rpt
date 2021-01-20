@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jan 14 22:45:26 2021
-| Host         : NIEN running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Jan 20 20:40:44 2021
+| Host         : DESKTOP-6MSQARF running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file AND_GATE_control_sets_placed.rpt
 | Design       : AND_GATE
 | Device       : xc7z020
@@ -23,17 +23,33 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     0 |
+| Total control sets                                       |     0 |
+|    Minimum number of control sets                        |     0 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |     0 |
 +----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
 
 
 2. Histogram
 ------------
 
-+--------+--------------+
-| Fanout | Control Sets |
-+--------+--------------+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     0 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     0 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
 
 
 3. Flip-Flop Distribution

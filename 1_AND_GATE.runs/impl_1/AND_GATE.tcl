@@ -60,14 +60,16 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param chipscope.maxJobs 1
   set_param xicom.use_bs_reader 1
   open_checkpoint AND_GATE_routed.dcp
-  set_property webtalk.parent_dir E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.cache/wt [current_project]
   catch { write_mem_info -force AND_GATE.mmi }
   write_bitstream -force AND_GATE.bit 
   catch {write_debug_probes -quiet -force AND_GATE}

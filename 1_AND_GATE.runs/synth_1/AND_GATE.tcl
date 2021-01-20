@@ -17,20 +17,21 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.cache/wt [current_project]
-set_property parent.project_path E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.cache/wt [current_project]
+set_property parent.project_path C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part e-elements:ego-xz7:part0:1.1 [current_project]
-set_property ip_output_repo e:/FPGA/CODE/1_AND_GATE/1_AND_GATE.cache/ip [current_project]
+set_property ip_output_repo c:/Users/wells/FPGA_DIVCLK/1_AND_GATE.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/sources_1/new/AND_GATE.vhd
+read_vhdl -library xil_defaultlib C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.srcs/sources_1/new/AND_GATE.vhd
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -39,8 +40,8 @@ read_vhdl -library xil_defaultlib E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/source
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/constrs_1/new/and_gate.xdc
-set_property used_in_implementation false [get_files E:/FPGA/CODE/1_AND_GATE/1_AND_GATE.srcs/constrs_1/new/and_gate.xdc]
+read_xdc C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.srcs/constrs_1/new/and_gate.xdc
+set_property used_in_implementation false [get_files C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.srcs/constrs_1/new/and_gate.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

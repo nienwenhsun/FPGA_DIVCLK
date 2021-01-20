@@ -12,22 +12,25 @@ entity AND_GATE is
 	a	: in std_logic;
  	b	: in std_logic;
  	c	: out std_logic;
+ 	d     : out std_logic;
  	q	: out std_logic
  );
 end AND_GATE;
 
 architecture Behavioral of AND_GATE is
-signal tmp	: integer range 0 to 23;
-signal tmpclk	: std_logic;
-signal Q1	: std_logic;
+signal tmp      : integer range 0 to 27;
+signal tmpclk   : std_logic;
+signal Q1       : std_logic;
 begin
-    c <= a and b;
+
+    c <= not a;
+    d <= b;
     q <= Q1;
     
     process(tmpclk, rst)
     begin
 		if rst = '1' then
-			Q1 <= '0';
+			Q1 <= '1';
 		elsif rising_edge(tmpclk) then
 			Q1 <= not Q1;
 		end if;
@@ -40,7 +43,7 @@ begin
     		tmpclk <= '1';
     	elsif rising_edge(clk) then
     		tmp <= tmp+1;
-    		if tmp>2000000 then
+    		if tmp > 15000000 then
     			tmpclk <= not tmpclk;
     			tmp <= 0;
     		end if;	

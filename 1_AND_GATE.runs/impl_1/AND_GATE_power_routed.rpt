@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Thu Jan 14 22:46:11 2021
-| Host             : NIEN running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date             : Wed Jan 20 20:41:15 2021
+| Host             : DESKTOP-6MSQARF running 64-bit major release  (build 9200)
 | Command          : report_power -file AND_GATE_power_routed.rpt -pb AND_GATE_power_summary_routed.pb -rpx AND_GATE_power_routed.rpx
 | Design           : AND_GATE
 | Device           : xc7z020clg484-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.823        |
+| Total On-Chip Power (W)  | 1.611        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.706        |
-| Device Static (W)        | 0.118        |
+| Dynamic (W)              | 1.476        |
+| Device Static (W)        | 0.135        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 75.5         |
-| Junction Temperature (C) | 34.5         |
+| Max Ambient (C)          | 66.4         |
+| Junction Temperature (C) | 43.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -55,10 +55,10 @@ Table of Contents
 | Slice Logic    |     0.001 |        2 |       --- |             --- |
 |   LUT as Logic |     0.001 |        1 |     53200 |           <0.01 |
 |   Others       |     0.000 |        1 |       --- |             --- |
-| Signals        |     0.013 |        3 |       --- |             --- |
-| I/O            |     0.691 |        4 |       200 |            2.00 |
-| Static Power   |     0.118 |          |           |                 |
-| Total          |     0.823 |          |           |                 |
+| Signals        |     0.010 |        3 |       --- |             --- |
+| I/O            |     1.465 |        5 |       200 |            2.50 |
+| Static Power   |     0.135 |          |           |                 |
+| Total          |     1.611 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,9 +68,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.033 |       0.023 |      0.010 |
-| Vccaux    |       1.800 |     0.037 |       0.025 |      0.012 |
-| Vcco33    |       3.300 |     0.194 |       0.193 |      0.001 |
+| Vccint    |       1.000 |     0.033 |       0.019 |      0.014 |
+| Vccaux    |       1.800 |     0.068 |       0.053 |      0.015 |
+| Vcco33    |       3.300 |     0.413 |       0.412 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -81,7 +81,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.022 |       0.000 |      0.022 |
+| Vccpint   |       1.000 |     0.029 |       0.000 |      0.029 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,7 +142,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| AND_GATE |     0.706 |
+| AND_GATE |     1.476 |
 +----------+-----------+
 
 
