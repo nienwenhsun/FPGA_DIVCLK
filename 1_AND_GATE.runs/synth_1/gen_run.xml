@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1611146338">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1611663541">
   <File Type="PA-TCL" Name="AND_GATE.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="AND_GATE_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="AND_GATE_reports.tcl"/>

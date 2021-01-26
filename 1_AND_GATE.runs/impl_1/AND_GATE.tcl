@@ -60,7 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net th[10] has multiple drivers: th_reg[10]/Q, and th_reg[10]__0/Q.}}  -suppress 
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream

@@ -1,0 +1,156 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jan 20 19:46:06 2021
+# Process ID: 7268
+# Current directory: C:/Users/wells/FPGA_DIVCLK
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1480 C:\Users\wells\FPGA_DIVCLK\1_AND_GATE.xpr
+# Log file: C:/Users/wells/FPGA_DIVCLK/vivado.log
+# Journal file: C:/Users/wells/FPGA_DIVCLK\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+startgroup
+set_property package_pin "" [get_ports [list  c]]
+place_ports q T22
+endgroup
+place_ports c T21
+save_constraints
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+refresh_design
+startgroup
+set_property package_pin "" [get_ports [list  q]]
+place_ports c T22
+endgroup
+place_ports d T21
+place_ports q U22
+save_constraints
+set_property IOSTANDARD LVCMOS33 [get_ports [list d]]
+save_constraints
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+place_ports rst M15
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+place_ports a N15
+place_ports b P16
+place_ports rst R18
+save_constraints -force
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/wells/FPGA_DIVCLK/1_AND_GATE.runs/impl_1/AND_GATE.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
